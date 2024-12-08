@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import bizlogic.Customer;
 
 
 public class FlightsData extends AdminData {
@@ -99,6 +100,88 @@ public class FlightsData extends AdminData {
             myStmt.setInt(1, 0);
             myStmt.setInt(2, customerID);
             myStmt.setString(3, flightNum);
+            myStmt.executeUpdate();
+        }
+        catch(Exception ex) {
+            ex.printStackTrace();
+        }
+        finally {
+            myConn.close();
+        }
+    }
+    public boolean flightFull(String flightNum) throws SQLException {
+
+        int count = 1;
+        Connection myConn = null;
+        PreparedStatement myStmt = null;
+        ResultSet myRs = null;
+        String sql = "select * from bookings where flightNum = ? ";
+
+        try {
+            myConn = DriverManager.getConnection
+                    ("jdbc:mysql://cis3270.mysql.database.azure.com:3306/cis3270" , "nahum7332" , "Shigute1329!");
+            myStmt = myConn.prepareStatement(sql);
+            myStmt.setString(1, flightNum);
+            myRs = myStmt.executeQuery();
+
+            if (myRs.next()) {
+                count++;
+            }
+
+            if (count == 6) {
+                return true;
+            }
+            else
+                return false;
+        }
+
+        catch(Exception ex) {
+            ex.printStackTrace();
+        }
+        finally {
+            myConn.close();
+        }
+        return true;
+    }
+
+    public boolean flightTimeConflict(String date, String time) {
+
+        Customer customer = new Customer();
+        int id = customer.getCustomerID();
+
+        PreparedStatement myStmt = null;
+        ResultSet rs = null;
+        String sql = "SELECT flights.date, flights.departureTime FROM flights " +
+                "INNER JOIN bookings ON flights.flightNum = bookings.flightNum and customerID = "
+                + "'" + id + "'" + "and flights.date = " + "'" + date + "'" +
+                "and flights.departureTime =" + "'" + time + "'";
+
+        try {
+            Connection con = FlightsData.getConnection();
+            myStmt = con.prepareStatement(sql);
+            rs = myStmt.executeQuery();
+
+            while(rs.next()) {
+                return true;
+            }
+        }
+        catch(Exception ex) {
+            ex.printStackTrace();
+        }
+        return false;
+    }
+
+    public void deleteFlight(String flightNum) throws SQLException {
+
+        Connection myConn = null;
+        PreparedStatement myStmt = null;
+        String sql = "delete from flights where flightNum = ? ";
+
+        try {
+            myConn = DriverManager.getConnection
+                    ("jdbc:mysql://cis3270.mysql.database.azure.com:3306/cis3270" , "nahum7332" , "Shigute1329!");
+            myStmt = myConn.prepareStatement(sql);
+            myStmt.setString(1, flightNum);
             myStmt.executeUpdate();
         }
         catch(Exception ex) {
