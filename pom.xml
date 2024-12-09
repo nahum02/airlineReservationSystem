@@ -21,6 +21,7 @@
             <artifactId>mssql-jdbc</artifactId>
             <version>12.2.0.jre11</version>
         </dependency>
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
