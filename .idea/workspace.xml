@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c80ce3f-c82d-4734-9778-0f11eb0be186" name="Changes" comment="adds a flight to flight database and books to booking database">
+    <list default="true" id="3c80ce3f-c82d-4734-9778-0f11eb0be186" name="Changes" comment="created a registration scene, able to switch scene when register button is clicked.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MainRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UI/MainRun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UI/run.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/run.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733613819227</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="created a registration scene, able to switch scene when register button is clicked.">
+      <option name="closed" value="true" />
+      <created>1733716012647</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733716012647</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,6 +175,7 @@
     <MESSAGE value="Testing File" />
     <MESSAGE value="Testing File1" />
     <MESSAGE value="adds a flight to flight database and books to booking database" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds a flight to flight database and books to booking database" />
+    <MESSAGE value="created a registration scene, able to switch scene when register button is clicked." />
+    <option name="LAST_COMMIT_MESSAGE" value="created a registration scene, able to switch scene when register button is clicked." />
   </component>
 </project>
