@@ -164,6 +164,17 @@ public class loginController extends Customer implements Initializable {
 
     }
 
+    public void manageFlightsButtonClicked(ActionEvent event) throws Exception {
+        Parent register = FXMLLoader.load(getClass().getResource("addFlights.fxml"));
+        Scene registerScene = new Scene(register);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(registerScene);
+        window.show();
+    }
+
+
+
+
 
 
     @Override
