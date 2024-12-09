@@ -110,7 +110,7 @@ public class Flights extends CustomerData {
         this.seatPrice = new SimpleStringProperty (seatPrice);
     }
 
-    // makes sure all new flight information boxes are filled out
+
 
     public boolean flightFilledCorrect(String flightNums, String flightDates, String departTimes,
                                        String departFroms, String arrivalTos, String airlines,
@@ -137,7 +137,6 @@ public class Flights extends CustomerData {
         }
     }
     public void addFlights() throws Exception {
-
         addFlight(flightNums, flightDates, departTimes, departFroms,
                 arrivalTos, airlines, seatPrices);
 
