@@ -60,7 +60,7 @@ public class loginController extends Customer {
 
 
     @FXML
-    public void registerBtnClicked(ActionEvent event) throws IOException {
+    public void registerButtonClicked(ActionEvent event) throws IOException {
         Logger logger = Logger.getLogger(loginController.class.getName());
 
         try {
@@ -83,7 +83,7 @@ public class loginController extends Customer {
         }
     }
 
-    public void signUpBtnClicked(ActionEvent event) throws Exception {
+    public void signUpButtonClicked(ActionEvent event) throws Exception {
         String birthday = birthYear.getText() + "/" + birthMonth.getText() + "/" + birthDay.getText();
 
         if (filledCorrect(firstName.getText(), lastName.getText(), email.getText(), address.getText(),
@@ -104,5 +104,12 @@ public class loginController extends Customer {
             lblNotFilled.setText("One or more fields are empty.");
         }
 
+    }
+    public void mainMenuButtonClicked (ActionEvent event) throws Exception {
+        Parent register = FXMLLoader.load(getClass().getResource("/frontEnd/run.fxml"));
+        Scene registerScene = new Scene(register);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(registerScene);
+        window.show();
     }
 }

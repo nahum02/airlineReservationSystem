@@ -36,6 +36,6 @@
                 <Font size="14.0" />
             </font>
         </Text>
-        <Button layoutX="417.0" layoutY="157.0" mnemonicParsing="false" onAction="#registerBtnClicked" prefHeight="26.0" prefWidth="135.0" style="-fx-background-color: #1E90FF;" text="Register" />
+        <Button layoutX="417.0" layoutY="157.0" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="26.0" prefWidth="135.0" style="-fx-background-color: #1E90FF;" text="Register" />
     </children>
 </AnchorPane>
