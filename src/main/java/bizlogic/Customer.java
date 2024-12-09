@@ -107,6 +107,40 @@ public class Customer extends CustomerData {
             return false;
         }
     }
+    public boolean filledCorrect(String firstName, String lastName, String email, String address,
+                                 String username, String password, String ssn, String securityAnswer,
+                                 String zipcode, String state, String birthday) throws Exception {
 
+        if (address.trim().equals("") || zipcode.trim().equals("") || email.trim().equals("") ||
+                state.trim().equals("") || securityAnswer.trim().equals("") ||
+                firstName.trim().equals("") || lastName.trim().equals("") || username.trim().equals("")
+                || ssn.trim().equals("") || password.trim().equals("") || birthday.trim().equals("")) {
 
+            return false;
+        }
+
+        else {
+
+            this.address = address;
+            this.zipCode = zipcode;
+            this.email = email;
+            this.state = state;
+            this.securityAnswer = securityAnswer;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.username = username;
+            this.password = password;
+            this.SSN = ssn;
+            this.birthday = birthday;
+
+            return true;
+        }
+    }
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
+    }
 }
+
+
+
+
