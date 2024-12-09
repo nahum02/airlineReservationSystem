@@ -4,6 +4,7 @@ import DB.AdminData;
 import bizlogic.Customer;
 import java.io.IOException;
 
+import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,11 +14,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
 
-public class loginController extends Customer {
+public class loginController extends Customer implements Initializable {
     @FXML
     private Label lblErrors;
     @FXML
@@ -111,5 +115,59 @@ public class loginController extends Customer {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(registerScene);
         window.show();
+    }
+
+    public void forgotPasswordButtonClicked (ActionEvent event) throws Exception {
+        Parent register = FXMLLoader.load(getClass().getResource("/frontend/forgotpasswordpage.fxml"));
+        Scene registerScene = new Scene(register);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(registerScene);
+        window.show();
+
+    }
+
+    public void getPasswordButtonClicked (ActionEvent event) throws Exception {
+
+        String username;
+        String pass;
+
+        if (checkUserName(user.getText(), securityAnswer.getText())) {
+
+            username = user.getText();
+            pass = getPass(username);
+
+            lblRetrievePass.setText(pass);
+        } else {
+            lblRetrievePass.setText("Username or security answer is invalid.");
+        }
+    }
+
+    public void userSignInButtonClicked (ActionEvent event) throws Exception {
+
+        if (pass(user.getText().toString(), pass.getText().toString())) {
+
+            String username = user.getText().toString();
+            Customer customer = new Customer();
+            customer.setUsername(username);
+            custID = custID(username);
+            customer.setCustomerID(custID);
+
+            Parent register = FXMLLoader.load(getClass().getResource("/frontend/flightspage.fxml"));
+            Scene registerScene = new Scene(register);
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(registerScene);
+            window.show();
+        } else {
+
+            lblErrors.setText("Incorrect Username or Password.");
+        }
+
+    }
+
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 }

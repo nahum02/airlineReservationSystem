@@ -21,13 +21,13 @@
         <AnchorPane layoutX="56.0" layoutY="24.0" prefHeight="291.0" prefWidth="337.0" style="-fx-background-color: #FFFFFF;">
             <children>
             <TextField fx:id="user" layoutX="118.0" layoutY="63.0" prefHeight="25.0" prefWidth="162.0" promptText="Username" />
-                <Button layoutX="118.0" layoutY="154.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="162.0" style="-fx-background-color: #1E90FF;" text="User sign in" />
+                <Button layoutX="118.0" layoutY="154.0" mnemonicParsing="false" onAction="#userSignInButtonClicked" prefHeight="25.0" prefWidth="162.0" style="-fx-background-color: #1E90FF;" text="User sign in" />
                 <Text fill="#141414" layoutX="18.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="76.55273252725601" />
                 <Text fill="#393737" layoutX="18.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="76.552734375" />
                 <PasswordField fx:id="pass" layoutX="118.0" layoutY="106.0" prefHeight="25.0" prefWidth="162.0" promptText="Password" />
                 <Label fx:id="lblErrors" layoutX="16.0" layoutY="137.0" prefHeight="17.0" prefWidth="183.0" textFill="BLACK" />
                 <Button layoutX="118.0" layoutY="197.0" mnemonicParsing="false" prefWidth="162.0" style="-fx-background-color: #1E90FF;" text="Admin sign in" />
-                <Button layoutX="118.0" layoutY="240.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="162.0" style="-fx-background-color: #1E90FF;" text="Forgot Password?" textFill="#171717" />
+                <Button layoutX="118.0" layoutY="240.0" mnemonicParsing="false" onAction="#forgotPasswordButtonClicked" prefHeight="26.0" prefWidth="162.0" style="-fx-background-color: #1E90FF;" text="Forgot Password?" textFill="#171717" />
             </children>
 
         </AnchorPane>

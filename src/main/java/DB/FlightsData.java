@@ -191,4 +191,25 @@ public class FlightsData extends AdminData {
             myConn.close();
         }
     }
+
+    public void deleteBook(int customerID, String flightNum) throws SQLException {
+
+        Connection myConn = null;
+        PreparedStatement myStmt = null;
+        String sql = "delete from bookings where customerID = " + "'" + customerID + "'"
+                + "and flightNum = " + "'" + flightNum + "'";
+
+        try {
+            myConn = DriverManager.getConnection
+                    ("jdbc:mysql://cis3270.mysql.database.azure.com:3306/cis3270" , "nahum7332" , "Shigute1329!");
+            myStmt = myConn.prepareStatement(sql);
+            myStmt.executeUpdate();
+        }
+        catch(Exception ex) {
+            ex.printStackTrace();
+        }
+        finally {
+            myConn.close();
+        }
+    }
 }

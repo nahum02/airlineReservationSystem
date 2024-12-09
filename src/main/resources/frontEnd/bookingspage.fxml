@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.UI.flightsController">
+    <children>
+    <Text fill="#171717" layoutX="289.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flights">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    </children>
+    <TableView fx:id="tableview" layoutX="22.0" layoutY="31.0" prefHeight="200.0" prefWidth="560.0">
+        <columns>
+            <TableColumn fx:id="colFlightNum" prefWidth="87.0" text="Flight number" />
+            <TableColumn fx:id="colDate" prefWidth="81.66668701171875" text="Date" />
+            <TableColumn fx:id="colDepartureTime" prefWidth="103.33331298828125" text="Departure time" />
+            <TableColumn fx:id="colDepartFrom" prefWidth="83.0" text="Depart from" />
+            <TableColumn fx:id="colArrivalTo" minWidth="8.3333740234375" prefWidth="61.0" text="Arrival to" />
+            <TableColumn fx:id="colAirline" prefWidth="78.6666259765625" text="Airline" />
+            <TableColumn fx:id="colSeatPrice" prefWidth="61.3333740234375" text="Seat price" />
+        </columns>
+    </TableView>
+    <Button layoutX="14.0" layoutY="257.0" mnemonicParsing="false" onAction="#deleteMyFlightBtnClicked" prefHeight="26.0" prefWidth="245.0" style="-fx-background-color: #1E90FF;" text="Delete flight" />
+    <Button layoutX="12.0" layoutY="312.0" mnemonicParsing="false"  prefHeight="26.0" prefWidth="245.0" style="-fx-background-color: #1E90FF;" text="Back to Flights" />
+    <Button layoutX="302.0" layoutY="257.0" mnemonicParsing="false"  prefHeight="26.0" prefWidth="295.0" style="-fx-background-color: #1E90FF;" text="Flights" />
+    <Label fx:id="lblFlightNotSelected" layoutX="100" layoutY="100" />
+   <Button layoutX="304.0" layoutY="312.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="289.0" style="-fx-background-color: #1E90FF;" text="Main Menu" />
+
+
+
+</AnchorPane>
