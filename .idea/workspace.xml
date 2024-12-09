@@ -7,7 +7,10 @@
     <list default="true" id="3c80ce3f-c82d-4734-9778-0f11eb0be186" name="Changes" comment="adds a flight to flight database and books to booking database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bizlogic/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bizlogic/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MainRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UI/MainRun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UI/run.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/run.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +20,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaFXApplication" />
         <option value="Class" />
         <option value="FxmlFile" />
-        <option value="JavaFXApplication" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -35,7 +39,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/nahum02/airlineReservationSystem.git&quot;,
-    &quot;accountId&quot;: &quot;e1bef25c-00fb-4924-8fe4-47f3437c144d&quot;
+    &quot;accountId&quot;: &quot;fc094c2c-73d2-405e-8fec-f3e9849cc67d&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -49,6 +53,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.MainRun.executor&quot;: &quot;Run&quot;,
     &quot;Application.Test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -64,8 +69,29 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/frontEnd" />
       <recent name="C:\Users\omarm\IdeaProjects\airlineReservationSystem\src\main\java\org\example\UI" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MainRun" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.UI.MainRun" />
+      <module name="airlineReversationSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainRun" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -147,16 +173,5 @@
     <MESSAGE value="Testing File1" />
     <MESSAGE value="adds a flight to flight database and books to booking database" />
     <option name="LAST_COMMIT_MESSAGE" value="adds a flight to flight database and books to booking database" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
