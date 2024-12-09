@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3c80ce3f-c82d-4734-9778-0f11eb0be186" name="Changes" comment="created a registration scene, able to switch scene when register button is clicked.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/FlightsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/FlightsData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bizlogic/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bizlogic/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UI/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UI/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/frontEnd/run.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/run.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +19,8 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="module-info" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -140,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733613819227</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Main Menu button Logic Executes when main menu button is clicked reruns back to main menu">
+      <option name="closed" value="true" />
+      <created>1733718820620</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733718820620</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,6 +177,7 @@
     <MESSAGE value="Testing File" />
     <MESSAGE value="Testing File1" />
     <MESSAGE value="adds a flight to flight database and books to booking database" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds a flight to flight database and books to booking database" />
+    <MESSAGE value="Added Main Menu button Logic Executes when main menu button is clicked reruns back to main menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Main Menu button Logic Executes when main menu button is clicked reruns back to main menu" />
   </component>
 </project>

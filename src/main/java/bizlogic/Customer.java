@@ -3,7 +3,7 @@ package bizlogic;
 
 import DB.CustomerData;
 
-public class Customer extends CustomerData {
+public class Customer extends Flights {
     private String firstName;
     private String lastName;
     private String address;
