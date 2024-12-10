@@ -172,6 +172,24 @@ public class loginController extends Customer implements Initializable {
         window.show();
     }
 
+    public void adminSignInButtonClicked (ActionEvent event) throws Exception {
+
+        if (adminPass(user.getText().toString(), pass.getText().toString())) {
+
+            Parent register = FXMLLoader.load(getClass().getResource("AdminPage.fxml"));
+            Scene registerScene = new Scene(register);
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(registerScene);
+            window.show();
+        } else {
+
+            lblErrors.setText("Incorrect Username or Password.");
+        }
+
+
+    }
+
+
 
 
 

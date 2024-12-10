@@ -175,6 +175,57 @@ public class flightsController extends loginController implements Initializable 
         window.setScene(registerScene);
         window.show();
     }
+    public static ObservableList<Flights> getSearch(String date, String from, String to)
+            throws ClassNotFoundException, SQLException {
+
+        ObservableList<Flights> obList = FXCollections.observableArrayList();
+
+        PreparedStatement myStmt = null;
+        ResultSet rs = null;
+        String sql = " select * from flights where departureLocation = " + "'" + from + "'"
+                + "and arrivalLocation = " + "'" + to + "'" + " and date = " + "'" + date + "'";
+
+        try {
+            Connection con = FlightsData.getConnection();
+            myStmt = con.prepareStatement(sql);
+            rs = myStmt.executeQuery();
+
+            while(rs.next()) {
+                obList.add(new Flights(rs.getString("flightNum"), rs.getString("date"),
+                        rs.getString("departureTime"), rs.getString("departureLocation"),
+                        rs.getString("arrivalLocation"), rs.getString("airline"),
+                        rs.getString("seatPrice")));
+            }
+        }
+        catch(Exception ex) {
+            ex.printStackTrace();
+        }
+        return obList;
+    }
+
+
+    public void searchBtnClicked(ActionEvent event) throws Exception {
+
+        lblflightBooked.setText("");
+        date = custDepartDate.getText().toString();
+        from = custDepartFrom.getText().toString();
+        to = custArrivalTo.getText().toString();
+
+        if (date.trim().equals("") || from.trim().equals("") || to.trim().equals("")) {
+
+            lblflightBooked.setText("One or more search fields are empty.");
+        }
+        else {
+            colFlightNum.setCellValueFactory(new PropertyValueFactory<>("flightNum"));
+            colDate.setCellValueFactory(new PropertyValueFactory<>("flightDate"));
+            colDepartureTime.setCellValueFactory(new PropertyValueFactory<>("departTime"));
+            colDepartFrom.setCellValueFactory(new PropertyValueFactory<>("departFrom"));
+            colArrivalTo.setCellValueFactory(new PropertyValueFactory<>("arrivalTo"));
+            colAirline.setCellValueFactory(new PropertyValueFactory<>("airline"));
+            colSeatPrice.setCellValueFactory(new PropertyValueFactory<>("seatPrice"));
+            tableview.setItems(getSearch(date,from,to));
+        }
+    }
 
 
 
