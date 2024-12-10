@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3c80ce3f-c82d-4734-9778-0f11eb0be186" name="Changes" comment="added images to search, flight and main menu button. Created more button methods in controller class when button clicked.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/FlightsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/FlightsData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UI/MainRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UI/MainRun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UI/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UI/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/frontEnd/addflightspage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/addflightspage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/frontEnd/flightspage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/flightspage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

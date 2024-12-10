@@ -11,7 +11,7 @@
         <graphic>
             <ImageView fitHeight="48.0" fitWidth="72.0">
                 <image>
-                    <Image url="@../../resources/images/img_2.png" />
+                    <Image url="https://static.vecteezy.com/system/resources/thumbnails/028/568/853/small/airplane-icon-aircraft-line-style-aeroplane-app-button-flight-mood-sign-fly-jet-aviation-airline-plane-vector.jpg" />
                 </image>
             </ImageView>
         </graphic></Button>
@@ -27,7 +27,7 @@
                     <graphic>
                         <ImageView fitHeight="29.0" fitWidth="37.0">
                             <image>
-                                <Image url="@../../resources/images/img.png" />
+                                <Image url="https://static.vecteezy.com/system/resources/thumbnails/001/504/972/small/search-icon-free-vector.jpg" />
                             </image></ImageView>
                     </graphic>
                 </Button>
@@ -35,7 +35,7 @@
                     <graphic>
                         <ImageView fitHeight="35.0" fitWidth="51.0">
                             <image>
-                                <Image url="@../../resources/images/img_1.png" />
+                                <Image url="https://cdn-icons-png.flaticon.com/512/61/61972.png" />
                             </image>
                         </ImageView>
                     </graphic>
