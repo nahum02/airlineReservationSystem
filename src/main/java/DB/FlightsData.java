@@ -90,16 +90,15 @@ public class FlightsData extends AdminData {
 
         Connection myConn = null;
         PreparedStatement myStmt = null;
-        String sql = "insert into bookings values (?, ?, ?)";
+        String sql = "INSERT INTO bookings (customerID, flightNum) VALUES (?, ?)";
 
 
         try {
             myConn = DriverManager.getConnection
                     ("jdbc:mysql://cis3270.mysql.database.azure.com:3306/cis3270" , "nahum7332" , "Shigute1329!");
             myStmt = myConn.prepareStatement(sql);
-            myStmt.setInt(1, 0);
-            myStmt.setInt(2, customerID);
-            myStmt.setString(3, flightNum);
+            myStmt.setInt(1, customerID);
+            myStmt.setString(2, flightNum);
             myStmt.executeUpdate();
         }
         catch(Exception ex) {
@@ -128,7 +127,7 @@ public class FlightsData extends AdminData {
                 count++;
             }
 
-            if (count == 6) {
+            if (count == 4) {
                 return true;
             }
             else

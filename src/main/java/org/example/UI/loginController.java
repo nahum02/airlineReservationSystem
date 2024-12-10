@@ -96,7 +96,7 @@ public class loginController extends Customer implements Initializable {
 
             if (checkUser(user.getText())) {
 
-                Parent registers = FXMLLoader.load(getClass().getResource("run.fxml"));
+                Parent registers = FXMLLoader.load(getClass().getResource("/frontEnd/run.fxml"));
                 Scene registerScene = new Scene(registers);
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 window.setScene(registerScene);
