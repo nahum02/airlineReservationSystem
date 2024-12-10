@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c80ce3f-c82d-4734-9778-0f11eb0be186" name="Changes" comment="created a registration scene, able to switch scene when register button is clicked.">
+    <list default="true" id="3c80ce3f-c82d-4734-9778-0f11eb0be186" name="Changes" comment="pulling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bizlogic/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bizlogic/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/CustomerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/CustomerData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UI/flightsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UI/flightsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UI/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UI/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UI/manageFlightsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UI/manageFlightsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/frontEnd/addflightspage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/addflightspage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/frontEnd/bookingspage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/bookingspage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/frontEnd/run.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/run.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

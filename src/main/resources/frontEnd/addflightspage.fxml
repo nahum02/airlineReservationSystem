@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.UI.manageFlightsController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.UI.manageFlightsController">
     <children>
         <Button layoutX="22.0" layoutY="23.0" mnemonicParsing="false" onAction="#mainMenuButtonClicked" style="-fx-background-color: #1E90FF;" text="Main Menu" />
         <Text fill="#282727" layoutX="251.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Flights">
@@ -48,12 +41,12 @@
         <Text fill="#363434" layoutX="490.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Airline" />
         <Text fill="#141414" layoutX="411.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrival to" />
         <Text fill="#222121" layoutX="551.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seat price" />
-        <Label fx:id="lblNotFilled" layoutX="167.0" layoutY="355.0" prefHeight="17.0" prefWidth="289.0" textFill="WHITE" />
-        <Text fill="#222121" layoutX="22.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select from the table a flight you wish to delete." wrappingWidth="300.3027038574219">
+        <Label fx:id="lblNotFilled" layoutX="167.0" layoutY="355.0" prefHeight="17.0" prefWidth="289.0" textFill="#222121" />
+        <Text fill="#222121" layoutX="22.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select from the table to delete a flight." wrappingWidth="300.3027038574219">
             <font>
                 <Font size="14.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="341.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="212.96942138671875" />
+        <Text layoutX="341.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="212.96942138671875" />
     </children>
 </AnchorPane>

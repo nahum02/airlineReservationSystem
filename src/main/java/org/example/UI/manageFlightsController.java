@@ -21,7 +21,9 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class manageFlightsController extends flightsController implements Initializable {
@@ -153,6 +155,52 @@ public class manageFlightsController extends flightsController implements Initia
                 lblNotFilled.setText("Flight deleted.");
             }
         }
+    }
+
+    public static ObservableList<Flights> getSearch(String date, String from, String to)
+            throws ClassNotFoundException, SQLException {
+
+        ObservableList<Flights> observableList = FXCollections.observableArrayList();
+
+        String str = date;
+        String str1 = from;
+        String str2 = to;
+
+        PreparedStatement myStmt = null;
+        ResultSet rs = null;
+        String sql = " select * from flights where departLocation = " + "'" + str1 + "'"
+                + "and arrivalDestination = " + "'" + str2 + "'" + " and date = " + "'" + str + "'";
+
+        try {
+
+            Connection con = FlightsData.getConnection();
+            myStmt = con.prepareStatement(sql);
+
+            rs = myStmt.executeQuery();
+
+            while(rs.next()) {
+                observableList.add(new Flights(rs.getString("flightNum"), rs.getString("date"),
+                        rs.getString("departureTime"), rs.getString("departLocation"),
+                        rs.getString("arrivalDestination"), rs.getString("airline"),
+                        rs.getString("seatPrice")));
+
+            }
+        }
+        catch(Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return observableList;
+    }
+
+
+
+    public void mainMenuButtonClicked(ActionEvent event) throws Exception {
+        Parent register = FXMLLoader.load(getClass().getResource("/frontend/run.fxml"));
+        Scene registerScene = new Scene(register);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(registerScene);
+        window.show();
     }
 
 

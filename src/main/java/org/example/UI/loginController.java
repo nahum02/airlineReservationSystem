@@ -175,8 +175,6 @@ public class loginController extends Customer implements Initializable {
 
 
 
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
