@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c80ce3f-c82d-4734-9778-0f11eb0be186" name="Changes" comment="developed buttons method in controller classes to implement an action when a button is clicked and inserted into UI.">
+    <list default="true" id="3c80ce3f-c82d-4734-9778-0f11eb0be186" name="Changes" comment="pulling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UI/flightsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UI/flightsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UI/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UI/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/frontEnd/run.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/run.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,13 +148,13 @@
       <option name="project" value="LOCAL" />
       <updated>1733718820620</updated>
     </task>
-    <task id="LOCAL-00007" summary="developed buttons method in controller classes to implement an action when a button is clicked and inserted into UI.">
+    <task id="LOCAL-00007" summary="pulling">
       <option name="closed" value="true" />
-      <created>1733802585407</created>
+      <created>1733803261114</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1733802585407</updated>
+      <updated>1733803261114</updated>
     </task>
     <option name="localTasksCounter" value="8" />
     <servers />
@@ -184,7 +187,7 @@
     <MESSAGE value="Testing File1" />
     <MESSAGE value="adds a flight to flight database and books to booking database" />
     <MESSAGE value="Added Main Menu button Logic Executes when main menu button is clicked reruns back to main menu" />
-    <MESSAGE value="developed buttons method in controller classes to implement an action when a button is clicked and inserted into UI." />
-    <option name="LAST_COMMIT_MESSAGE" value="developed buttons method in controller classes to implement an action when a button is clicked and inserted into UI." />
+    <MESSAGE value="pulling" />
+    <option name="LAST_COMMIT_MESSAGE" value="pulling" />
   </component>
 </project>
