@@ -2,9 +2,9 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.Font?>
+
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.UI.flightsController">
     <children>
     <Text fill="#171717" layoutX="289.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flights">
@@ -24,11 +24,11 @@
             <TableColumn fx:id="colSeatPrice" prefWidth="61.3333740234375" text="Seat price" />
         </columns>
     </TableView>
-    <Button layoutX="14.0" layoutY="257.0" mnemonicParsing="false" onAction="#deleteMyFlightBtnClicked" prefHeight="26.0" prefWidth="245.0" style="-fx-background-color: #1E90FF;" text="Delete flight" />
-    <Button layoutX="12.0" layoutY="312.0" mnemonicParsing="false"  prefHeight="26.0" prefWidth="245.0" style="-fx-background-color: #1E90FF;" text="Back to Flights" />
-    <Button layoutX="302.0" layoutY="257.0" mnemonicParsing="false"  prefHeight="26.0" prefWidth="295.0" style="-fx-background-color: #1E90FF;" text="Flights" />
+    <Button layoutX="14.0" layoutY="257.0" mnemonicParsing="false" onAction="#deleteMyBookBtnClicked" prefHeight="26.0" prefWidth="245.0" style="-fx-background-color: #1E90FF;" text="Delete flight" />
+    <Button layoutX="12.0" layoutY="312.0" mnemonicParsing="false" onAction="#backToFlightsButtonClicked" prefHeight="26.0" prefWidth="245.0" style="-fx-background-color: #1E90FF;" text="Back to Flights" />
+    <Button layoutX="302.0" layoutY="257.0" mnemonicParsing="false" onAction="#showMyFlightsButtonClicked" prefHeight="26.0" prefWidth="295.0" style="-fx-background-color: #1E90FF;" text="Flights" />
     <Label fx:id="lblFlightNotSelected" layoutX="100" layoutY="100" />
-   <Button layoutX="304.0" layoutY="312.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="289.0" style="-fx-background-color: #1E90FF;" text="Main Menu" />
+   <Button layoutX="304.0" layoutY="312.0" mnemonicParsing="false" onAction="#mainMenuButtonClicked" prefHeight="26.0" prefWidth="289.0" style="-fx-background-color: #1E90FF;" text="Main Menu" />
 
 
 

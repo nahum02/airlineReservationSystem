@@ -1,5 +1,6 @@
 package org.example.UI;
 
+import DB.FlightsData;
 import bizlogic.Customer;
 import bizlogic.Flights;
 import javafx.collections.FXCollections;
@@ -15,10 +16,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 public class flightsController extends loginController implements Initializable {
@@ -74,7 +79,7 @@ public class flightsController extends loginController implements Initializable 
 
     public void myFlightsButtonClicked(ActionEvent event) throws Exception {
         try {
-            Parent register = FXMLLoader.load(getClass().getResource("/frotend/bookingpage.fxml"));
+            Parent register = FXMLLoader.load(getClass().getResource("/frontEnd/bookingspage.fxml"));
             Scene registerScene = new Scene(register);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(registerScene);
@@ -85,7 +90,7 @@ public class flightsController extends loginController implements Initializable 
     }
 
 
-    public void deleteMyFlightBtnClicked(ActionEvent event) throws Exception {
+    public void deleteMyBookBtnClicked(ActionEvent event) throws Exception {
 
         Flights flight = tableview.getSelectionModel().getSelectedItem();
 
@@ -102,7 +107,76 @@ public class flightsController extends loginController implements Initializable 
         }
     }
 
-    
+    public void showMyFlightsButtonClicked(ActionEvent event) throws Exception {
+
+
+        Customer customer = new Customer();
+        int id = customer.getCustomerID();
+
+        PreparedStatement myStmt = null;
+        ResultSet rs = null;
+        String sql = " SELECT flights.flightNum, flights.date, flights.departureTime, "
+                + "flights.departureLocation, flights.arrivalLocation, flights.airline, "
+                + "flights.seatPrice FROM flights "
+                + "INNER JOIN bookings ON flights.flightNum = bookings.flightNum "
+                + "AND bookings.customerID = ?";
+
+        try {
+            Connection con = FlightsData.getConnection();
+            myStmt = con.prepareStatement(sql);
+            myStmt.setInt(1, id);
+            rs = myStmt.executeQuery();
+
+
+            observableList.clear();
+
+            while(rs.next()) {
+                observableList.add(new Flights(rs.getString("flightNum"), rs.getString("date"),
+                        rs.getString("departureTime"), rs.getString("departureLocation"),
+                        rs.getString("arrivalLocation"), rs.getString("airline"),
+                        rs.getString("seatPrice")));
+            }
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            if (rs != null) rs.close();
+            if (myStmt != null) myStmt.close();
+        }
+
+
+        colFlightNum.setCellValueFactory(new PropertyValueFactory<>("flightNum"));
+        colDate.setCellValueFactory(new PropertyValueFactory<>("flightDate"));
+        colDepartureTime.setCellValueFactory(new PropertyValueFactory<>("departTime"));
+        colDepartFrom.setCellValueFactory(new PropertyValueFactory<>("departFrom"));
+        colArrivalTo.setCellValueFactory(new PropertyValueFactory<>("arrivalTo"));
+        colAirline.setCellValueFactory(new PropertyValueFactory<>("airline"));
+        colSeatPrice.setCellValueFactory(new PropertyValueFactory<>("seatPrice"));
+
+
+        tableview.setItems(observableList);
+
+
+    }
+
+
+    public void backToFlightsButtonClicked(ActionEvent event) throws Exception {
+
+        Parent register = FXMLLoader.load(getClass().getResource("/frontend/flightspage.fxml"));
+        Scene registerScene = new Scene(register);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(registerScene);
+        window.show();
+    }
+
+    public void mainMenuButtonClicked(ActionEvent event) throws Exception {
+        Parent register = FXMLLoader.load(getClass().getResource("/frontend/run.fxml"));
+        Scene registerScene = new Scene(register);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(registerScene);
+        window.show();
+    }
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

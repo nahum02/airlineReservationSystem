@@ -14,7 +14,7 @@ public class CustomerData extends FlightsData {
         String sql = "select * from customer where username = ? and password = ? ";
 
         try {
-            myConn = DriverManager.getConnection
+            myConn = DriverManager.getConnection 
                         ("jdbc:mysql://cis3270.mysql.database.azure.com:3306/cis3270", "nahum7332", "Shigute1329!");
             myStmt = myConn.prepareStatement(sql);
             myStmt.setString(1, user);
