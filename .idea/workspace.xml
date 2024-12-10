@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3c80ce3f-c82d-4734-9778-0f11eb0be186" name="Changes" comment="created a registration scene, able to switch scene when register button is clicked.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bizlogic/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bizlogic/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UI/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UI/loginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
