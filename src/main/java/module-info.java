@@ -5,4 +5,5 @@ module org.example.UI {
     requires javafx.graphics;
     exports org.example.UI;
     opens org.example.UI to javafx.fxml;
+    opens bizlogic to javafx.base;
 }

@@ -22,7 +22,7 @@
                         <Font size="18.0" />
                     </font>
                 </Text>
-                <Button layoutX="14.0" layoutY="13.0" mnemonicParsing="false"  prefHeight="60.0" prefWidth="79.0" style="-fx-background-color: FFFFFF;">
+                <Button layoutX="14.0" layoutY="26.0" mnemonicParsing="false" onAction="#searchBtnClicked" prefHeight="60.0" prefWidth="79.0" style="-fx-background-color: FFFFFF;">
                     <Label layoutX="50.0" layoutY="350.0" text="Flight Booked" />
                     <graphic>
                         <ImageView fitHeight="29.0" fitWidth="37.0">
@@ -33,13 +33,15 @@
                 </Button>
                 <Button layoutX="564.0" layoutY="13.0" mnemonicParsing="false" onAction="#mainMenuButtonClicked" prefHeight="71.0" prefWidth="94.0" style="-fx-background-color: FFFFFF;">
                     <graphic>
-                        <ImageView fitHeight="33.0" fitWidth="39.0">
+                        <ImageView fitHeight="35.0" fitWidth="51.0">
                             <image>
                                 <Image url="@../../resources/images/img_1.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </Button>
+            <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="119.0" text="Click here to search" />
+            <Label layoutX="442.0" layoutY="15.0" prefHeight="17.0" prefWidth="190.0" text="Return to Main menu" />
             </children>
         </AnchorPane>
         <Text fill="WHITE" layoutX="288.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.00000174343586">
@@ -64,7 +66,7 @@
         </Text>
         <TextField fx:id="custDepartFrom" layoutX="63.0" layoutY="112.0" prefHeight="25.0" prefWidth="146.0" promptText="City (e.g. Atl)" />
         <TextField fx:id="custArrivalTo" layoutX="63.0" layoutY="162.0" prefHeight="25.0" prefWidth="146.0" promptText="City (e.g. Mia)" />
-        <TextField fx:id="custDepartDate" layoutX="63.0" layoutY="208.0" prefHeight="25.0" prefWidth="146.0" promptText="Date (e.g. MM/DD/YYYY)" />
+        <TextField fx:id="custDepartDate" layoutX="63.0" layoutY="208.0" prefHeight="25.0" prefWidth="146.0" promptText="Date (e.g. YYYY/MM/DD)" />
         <TableView fx:id="tableview" layoutX="19.0" layoutY="232.0" prefHeight="236.0" prefWidth="631.0">
             <columns>
                 <TableColumn fx:id="colFlightNum" prefWidth="88.33334350585938" text="Flight number" />
@@ -76,9 +78,9 @@
                 <TableColumn fx:id="colSeatPrice" prefWidth="78.66668701171875" text="Seat price" />
             </columns>
         </TableView>
-        <Button layoutX="50.0" layoutY="481.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="248.0" style="-fx-background-color: #1E90FF;" text="Book Flight">
+        <Button layoutX="50.0" layoutY="481.0" mnemonicParsing="false" onAction="#bookFlightsButtonClicked" prefHeight="29.0" prefWidth="248.0" style="-fx-background-color: #1E90FF;" text="Book Flights">
         </Button>
-        <Button layoutX="404.0" layoutY="480.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="229.0" style="-fx-background-color: #1E90FF;" text="See all flights" />
+        <Button layoutX="404.0" layoutY="480.0" mnemonicParsing="false" onAction="#seeAllFlightsClicked" prefHeight="29.0" prefWidth="229.0" style="-fx-background-color: #1E90FF;" text="See all flights" />
         <Label fx:id="lblflightBooked" layoutX="357.0" layoutY="198.0" prefHeight="29.0" prefWidth="312.0" textFill="#141414" wrapText="true">
             <font>
                 <Font size="14.0" />

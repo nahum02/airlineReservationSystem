@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c80ce3f-c82d-4734-9778-0f11eb0be186" name="Changes" comment="pulling">
+    <list default="true" id="3c80ce3f-c82d-4734-9778-0f11eb0be186" name="Changes" comment="pull">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UI/flightsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UI/flightsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UI/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UI/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/frontEnd/run.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/run.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/frontEnd/AdminPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/AdminPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/frontEnd/addflightspage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/addflightspage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/frontEnd/bookingspage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/bookingspage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/frontEnd/flightspage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/frontEnd/flightspage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

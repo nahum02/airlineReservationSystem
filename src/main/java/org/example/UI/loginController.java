@@ -165,7 +165,7 @@ public class loginController extends Customer implements Initializable {
     }
 
     public void manageFlightsButtonClicked(ActionEvent event) throws Exception {
-        Parent register = FXMLLoader.load(getClass().getResource("addFlights.fxml"));
+        Parent register = FXMLLoader.load(getClass().getResource("/FrontEnd/addflightspage.fxml"));
         Scene registerScene = new Scene(register);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(registerScene);
@@ -176,7 +176,7 @@ public class loginController extends Customer implements Initializable {
 
         if (adminPass(user.getText().toString(), pass.getText().toString())) {
 
-            Parent register = FXMLLoader.load(getClass().getResource("AdminPage.fxml"));
+            Parent register = FXMLLoader.load(getClass().getResource("/FrontEnd/AdminPage.fxml"));
             Scene registerScene = new Scene(register);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(registerScene);
@@ -188,6 +188,8 @@ public class loginController extends Customer implements Initializable {
 
 
     }
+
+
 
 
 

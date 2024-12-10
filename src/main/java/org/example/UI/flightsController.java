@@ -24,6 +24,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class flightsController extends loginController implements Initializable {
@@ -161,7 +162,7 @@ public class flightsController extends loginController implements Initializable 
 
     public void backToFlightsButtonClicked(ActionEvent event) throws Exception {
 
-        Parent register = FXMLLoader.load(getClass().getResource("/frontend/flightspage.fxml"));
+        Parent register = FXMLLoader.load(getClass().getResource("/frontEnd/flightspage.fxml"));
         Scene registerScene = new Scene(register);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(registerScene);
@@ -169,7 +170,7 @@ public class flightsController extends loginController implements Initializable 
     }
 
     public void mainMenuButtonClicked(ActionEvent event) throws Exception {
-        Parent register = FXMLLoader.load(getClass().getResource("/frontend/run.fxml"));
+        Parent register = FXMLLoader.load(getClass().getResource("/frontEnd/run.fxml"));
         Scene registerScene = new Scene(register);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(registerScene);
@@ -225,6 +226,75 @@ public class flightsController extends loginController implements Initializable 
             colSeatPrice.setCellValueFactory(new PropertyValueFactory<>("seatPrice"));
             tableview.setItems(getSearch(date,from,to));
         }
+    }
+
+
+    public void bookFlightsButtonClicked(ActionEvent event) throws Exception {
+
+        lblflightBooked.setText("");
+
+        Flights data = tableview.getSelectionModel().getSelectedItem();
+        Flights date = tableview.getSelectionModel().getSelectedItem();
+        Flights time = tableview.getSelectionModel().getSelectedItem();
+        if(data == null) {
+            lblflightBooked.setText("Please select a flight first.");
+        }
+        else {
+            String flight = data.getFlightNum();
+            String flightDate = date.getFlightDate();
+            String flightTime = time.getDepartTime();
+            Customer customer = new Customer();
+            int id = customer.getCustomerID();
+
+            if(unique(id,flight)) {
+                // display flight is already booked
+                lblflightBooked.setText("You already have flight " + flight + " booked.");
+            }
+            else {
+                if(flightFull(flight)) {
+                    lblflightBooked.setText("Sorry flight is full.");
+
+                }
+                else {
+                    if(flightTimeConflict(flightDate, flightTime)) {
+                        lblflightBooked.setText("You already have a flight scheduled at this time.");
+                    }
+
+                    else {
+                        //book flight
+                        book(id,flight);
+                        lblflightBooked.setText("Flight " + flight + " is now booked.");
+                    }
+                }
+            }
+        }
+    }
+
+    public void seeAllFlightsClicked(ActionEvent event) throws Exception {
+        lblflightBooked.setText("");
+        try {
+
+            Connection con = FlightsData.getConnection();
+            ResultSet rs = con.createStatement().executeQuery("select * from flights");
+
+            while(rs.next()) {
+                observableList.add(new Flights(rs.getString("FlightNum"), rs.getString("date"),
+                        rs.getString("departureTime"), rs.getString("departureLocation"),
+                        rs.getString("arrivalLocation"), rs.getString("airline"),
+                        rs.getString("seatPrice")));
+            }
+        }
+        catch(Exception ex) {
+            ex.printStackTrace();
+        }
+        colFlightNum.setCellValueFactory(new PropertyValueFactory<>("FlightNum"));
+        colDate.setCellValueFactory(new PropertyValueFactory<>("flightDate"));
+        colDepartureTime.setCellValueFactory(new PropertyValueFactory<>("departTime"));
+        colDepartFrom.setCellValueFactory(new PropertyValueFactory<>("departFrom"));
+        colArrivalTo.setCellValueFactory(new PropertyValueFactory<>("arrivalTo"));
+        colAirline.setCellValueFactory(new PropertyValueFactory<>("airline"));
+        colSeatPrice.setCellValueFactory(new PropertyValueFactory<>("seatPrice"));
+        tableview.setItems(observableList);
     }
 
 

@@ -12,7 +12,7 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <Button layoutX="454.0" layoutY="23.0" mnemonicParsing="false" onAction="#backToAdminTerminalButtonClicked" style="-fx-background-color: #1E90FF;" text="Back to admin's terminal" />
+        <Button layoutX="400.0" layoutY="340.0" mnemonicParsing="false" onAction="#backToAdminTerminalButtonClicked" style="-fx-background-color: #1E90FF;" text="Back to admin's terminal" />
         <TableView fx:id="tableview" layoutX="22.0" layoutY="75.0" prefHeight="149.0" prefWidth="579.0">
             <columns>
                 <TableColumn fx:id="colFlightNum" prefWidth="85.0" text="Flight number" />
@@ -26,7 +26,7 @@
         </TableView>
 
         <Button layoutX="22.0" layoutY="251.0" mnemonicParsing="false" onAction="#addFlightsBtnClicked" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #1E90FF;" text="Add Flight" />
-        <Button layoutX="341.0" layoutY="301.0" mnemonicParsing="false" onAction="#deleteFlightBtnClicked" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: #1E90FF;" text="Delete Flight" />
+        <Button layoutX="402.0" layoutY="292.0" mnemonicParsing="false" onAction="#deleteFlightBtnClicked" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: #1E90FF;" text="Delete Flight" />
         <TextField fx:id="flightNum" layoutX="124.0" layoutY="251.0" prefHeight="25.0" prefWidth="63.0" promptText="Flight No." />
         <TextField fx:id="flightDate" layoutX="194.0" layoutY="251.0" prefHeight="25.0" prefWidth="63.0" promptText="Date" />
         <TextField fx:id="departTime" layoutX="264.0" layoutY="251.0" prefHeight="25.0" prefWidth="63.0" promptText="Depart time" />
@@ -41,8 +41,8 @@
         <Text fill="#363434" layoutX="490.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Airline" />
         <Text fill="#141414" layoutX="411.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrival to" />
         <Text fill="#222121" layoutX="551.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seat price" />
-        <Label fx:id="lblNotFilled" layoutX="167.0" layoutY="355.0" prefHeight="17.0" prefWidth="289.0" textFill="#222121" />
-        <Text fill="#222121" layoutX="22.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select from the table to delete a flight." wrappingWidth="300.3027038574219">
+        <Label fx:id="lblNotFilled" layoutX="69.0" layoutY="333.0" prefHeight="17.0" prefWidth="289.0" textFill="#222121" />
+        <Text fill="#222121" layoutX="107.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select from the table to delete a flight." wrappingWidth="300.3027038574219">
             <font>
                 <Font size="14.0" />
             </font>
